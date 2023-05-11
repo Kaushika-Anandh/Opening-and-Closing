@@ -8,73 +8,86 @@ To implement Opening and Closing using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
+Import the necessary packages.
 <br>
 
-
 ### Step2:
+Create the Text using cv2.putText.
 <br>
 
 ### Step3:
-<br>
+Create the sturcturing element kernel via autogeneration for opening and closing using :
+```python
+cv2.getStructuringElement(cv2.MORPH_RECT,('''dimention of structuring element'''))
+```
+
 
 ### Step4:
+Implement Opening and Closing over the image using cv2.morphologyEx().
 <br>
 
 ### Step5:
+Display the result Image.
 <br>
-
+<br>
+<br>
+<br>
+<br>
+<br>
  
 ## Program:
-
-``` Python
-# Import the necessary packages
-
-
-
-# Create the Text using cv2.putText
-
-
-
-# Create the structuring element
-
-
-
-# Use Opening operation
-
-
-
-
-# Use Closing Operation
-
-
-
-
-
+```python
+# program by  : Kaushika A
+# register no : 212221230048
 ```
+### Import the necessary packages
+```python 
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+```
+### Create the Text using cv2.putText
+```python
+text_image = np.zeros((100,250),dtype = 'uint8')
+font = cv2.FONT_HERSHEY_COMPLEX_SMALL
+cv2.putText(text_image,"Kaushika",(5,70),font,2,(255),2,cv2.LINE_AA) 
+plt.title("Original Image")
+plt.imshow(text_image,'Blues')
+plt.axis('off')
+```
+### Create the structuring element
+```python
+kernel1=cv2.getStructuringElement(cv2.MORPH_RECT,(5,5))
+kernel2=cv2.getStructuringElement(cv2.MORPH_RECT,(5,5))
+```
+### Use Opening operation
+```python
+img_open=cv2.morphologyEx(text_image,cv2.MORPH_OPEN,kernel2)
+plt.title("Opened Image")
+plt.imshow(img_open,'Blues')
+plt.axis('off')
+```
+# Use Closing Operation
+```python
+img_close=cv2.morphologyEx(text_image,cv2.MORPH_CLOSE,kernel1)
+plt.title("Closed Image")
+plt.imshow(img_close,'Blues')
+plt.axis('off')
+```
+
+
 ## Output:
 
-### Display the input Image
-<br>
-<br>
-<br>
-<br>
-<br>
+### Input Image
+![](1.png)
 <br>
 
-### Display the result of Opening
-<br>
-<br>
-<br>
-<br>
-<br>
+### Result of Opening
+![](2.png)
 <br>
 
-### Display the result of Closing
-<br>
-<br>
-<br>
-<br>
-<br>
+### Result of Closing
+![](3.png)
 <br>
 
 ## Result
