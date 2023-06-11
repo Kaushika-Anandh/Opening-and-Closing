@@ -91,6 +91,8 @@ plt.axis('off')
 <br>
 <br>
 <br>
+<br>
+<br>
 
 **Result of Opening**
 
