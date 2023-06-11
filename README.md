@@ -85,6 +85,12 @@ plt.axis('off')
 
 <img src="https://github.com/Kaushika-Anandh/Opening-and-Closing/blob/main/1.png" width="350" height="180">
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 **Result of Opening**
 
